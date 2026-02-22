@@ -25,14 +25,14 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-secondary/95 backdrop-blur-md border-b border-primary/10 py-3 shadow-sm' : 'bg-transparent py-6'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-secondary/95 backdrop-blur-md border-b border-primary/10 py-3 shadow-sm' : 'bg-transparent py-6 md:py-6 py-8'}`}>
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           <div className="flex items-center cursor-pointer group hover:opacity-90 transition-opacity" onClick={() => scrollTo(SectionId.HOME)}>
-            <Logo size="md" />
+            <Logo size="md" className={`${!scrolled ? 'brightness-0 invert md:filter-none' : ''}`} />
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-12">
+          <nav className="hidden md:flex items-center gap-10">
             {[
               { label: 'About', id: SectionId.ABOUT },
               { label: 'Tours', id: SectionId.TOURS },
@@ -41,22 +41,22 @@ export const Header: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className={`font-serif text-sm font-bold tracking-widest uppercase hover:text-primary transition-colors relative group ${scrolled ? 'text-textMain' : 'text-textMain'}`}
+                className={`font-sans text-xs font-medium tracking-[0.2em] uppercase hover:text-primary transition-colors relative group ${scrolled ? 'text-textMain' : 'text-textMain'}`}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-primary transition-all duration-500 ease-out group-hover:w-full opacity-0 group-hover:opacity-100"></span>
               </button>
             ))}
             <button 
               onClick={() => scrollTo(SectionId.CONTACT)}
-              className={`px-6 py-2 rounded-lg border-2 border-primary text-sm font-bold tracking-widest transition-all uppercase ${scrolled ? 'bg-primary text-secondary hover:bg-transparent hover:text-primary' : 'bg-transparent text-primary hover:bg-primary hover:text-secondary'}`}
+              className={`px-8 py-3 rounded-[30px] border border-primary text-xs font-bold tracking-[0.15em] transition-all uppercase ${scrolled ? 'bg-primary text-secondary hover:bg-transparent hover:text-primary' : 'bg-transparent text-primary hover:bg-primary hover:text-secondary'}`}
             >
               Contact
             </button>
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button className="md:hidden text-primary" onClick={() => setIsOpen(!isOpen)}>
+          <button className={`md:hidden ${scrolled ? 'text-primary' : 'text-white'}`} onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
