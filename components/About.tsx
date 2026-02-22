@@ -36,7 +36,8 @@ export const About: React.FC = () => {
                 世界最大級のツアー予約サイト<br/>
                 「Viator」において、<br/>
                 <strong className="text-primary text-base">「Best Seller」を獲得。</strong><br/>
-                グローバルスタンダードな品質が、<br/>ここに証明されています。
+                グローバルスタンダードな品質として<br/>
+                世界中の旅人に選ばれています。
               </p>
            </div>
 
@@ -63,10 +64,10 @@ export const About: React.FC = () => {
                 熱量と柔軟性を備えた<br/>若手プロフェッショナル
               </h4>
               <p className="text-textMuted text-sm leading-loose font-sans flex-grow">
-                最大の強みは、<br/>英語堪能な若手ガイド陣。<br/>
-                マニュアルに縛られない<br/>
+                最大の強みは、<br/>
+                熱意のある英語堪能な若手ガイド陣。<br/>
                 <strong className="text-textMain text-base">「熱量」と「柔軟性」</strong>で、<br/>
-                心に残る特別な一日を演出します。
+                ガイドブックにはない深い感動をゲストの心に刻みます。
               </p>
            </div>
         </div>
