@@ -29,36 +29,6 @@ export const Contact: React.FC = () => {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Partnership Message Section */}
-        <div className="bg-secondary/50 rounded-2xl p-8 md:p-12 mb-24 border border-primary/10">
-           <div className="md:flex gap-12 items-center">
-              <div className="md:w-1/3 mb-8 md:mb-0">
-                 <div className="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mb-6 shadow-md">
-                    <Handshake size={32} />
-                 </div>
-                 <span className="text-accent font-bold tracking-widest text-xs uppercase mb-2 block">Partnerships</span>
-                 <h2 className="font-serif font-black text-3xl md:text-4xl text-textMain leading-tight">
-                   企業・自治体の<br/>皆様へ
-                 </h2>
-              </div>
-              <div className="md:w-2/3">
-                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 md:whitespace-nowrap">
-                   インバウンドの波を、共に地域の力へ。
-                 </h3>
-                 <p className="text-textMuted font-sans text-md md:text-lg leading-loose text-justify">
-                   私たちが現場で培った<br className="hidden md:block"/>
-                   「外国人観光客のリアルなインサイト」と<br className="hidden md:block"/>
-                   「最高評価のガイドノウハウ」。<br/><br/>
-                   貴社のリソースと掛け合わせることで、<br className="hidden md:block"/>
-                   これまでにない観光価値を創出します。<br/><br/>
-                   ツアーの共同企画や実証実験など、<br className="hidden md:block"/>
-                   ぜひお気軽にご相談ください。
-                 </p>
-              </div>
-           </div>
-        </div>
-
-
         <div className="grid md:grid-cols-2 gap-20 items-start">
           
           <div className="space-y-10">
@@ -80,9 +50,9 @@ export const Contact: React.FC = () => {
                  <span className="w-2 h-2 rounded-full bg-primary"></span> Office
                </h4>
                <p className="text-textMain font-serif text-xl">
-                 707 Casabella International Plaza Bldg.,<br/>
-                 1-1-18 Isobedori, Chuo-ku,<br/>
-                 Kobe, Hyogo, Japan
+                 〒651-0084<br/>
+                 兵庫県神戸市中央区磯辺通1-1-18<br/>
+                 カサベラ国際プラザビル707
                </p>
             </div>
           </div>
