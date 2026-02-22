@@ -1,14 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Tours } from './components/Tours';
+import { CompanyProfile } from './components/CompanyProfile';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
-const rootElement = document.getElementById('root');
-
-if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
-      <App />  {/* ← ★ここが抜けていたため、何も表示されていませんでした */}
-    </React.StrictMode>
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col font-sans text-textMain selection:bg-primary selection:text-white">
+      <Header />
+      <main className="flex-grow">
+        <Hero />
+        <About />
+        <Tours />
+        <CompanyProfile />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
+
+export default App;
