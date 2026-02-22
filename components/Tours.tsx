@@ -114,4 +114,29 @@ export const Tours: React.FC = () => {
                      <h3 className="text-2xl md:text-3xl font-serif font-black text-textMain mb-4 group-hover:text-primary transition-colors">
                        {tour.title}
                      </h3>
-                     <p className="text-textMuted text-base leading-relaxed font-sans flex-
+                     <p className="text-textMuted text-base leading-relaxed font-sans flex-grow">
+                       {tour.description}
+                     </p>
+                     
+                     <div className="mt-8 pt-6 border-t border-primary/10 flex justify-end items-center gap-2">
+                        <span className="text-sm font-bold uppercase tracking-widest text-accent group-hover:underline">
+                          {tour.link ? 'Book on Viator' : 'View Details'}
+                        </span>
+                        {tour.link && <ExternalLink size={16} className="text-accent" />}
+                     </div>
+                  </div>
+                </div>
+              </CardWrapper>
+            );
+          })}
+        </div>
+        
+        <div className="mt-12 md:hidden text-center">
+             <a href="https://www.viator.com/tours/Kobe/kobe-100-Personalized-Tour-with-Local-Student-Guide/d27432-5550348P3" target="_blank" rel="noopener noreferrer" className="text-textMain font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+               VIEW ALL TOURS
+             </a>
+        </div>
+      </div>
+    </section>
+  );
+};
