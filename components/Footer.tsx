@@ -5,9 +5,9 @@ import { Logo } from './ui/Logo';
 
 export const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: Instagram, href: 'https://www.instagram.com/link_roots/', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/kobe_student_tour/', label: 'Instagram' },
     { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/1Kk2735CT5/', label: 'Facebook' },
   ];
 
   return (
